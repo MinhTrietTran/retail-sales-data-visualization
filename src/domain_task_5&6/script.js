@@ -33,6 +33,8 @@ d3.csv("../../data/final_data.csv").then(rawData => {
         d.year = d.dateObj ? getYear(d.dateObj) : null;
     });
 
+    
+
     // Lấy danh sách năm có trong dữ liệu
     const years = Array.from(new Set(data.map(d => d.year))).sort((a, b) => a - b);
     years.unshift("Tất cả");
