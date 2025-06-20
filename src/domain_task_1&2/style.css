@@ -129,3 +129,14 @@ circle:hover, rect:hover {
   background: linear-gradient(90deg, #005fa3 0%, #00a0b3 100%);
   transform: translateY(-2px) scale(1.04);
 }
+
+#chart-comment,
+#scatter-comment,
+#pie-comment {
+    margin-top: 36px !important;
+    font-size: 16px;
+    color: #2d3a4b;
+    text-align: center;
+    position: static;
+    z-index: 1;
+}
