@@ -13,7 +13,7 @@ const yearSelect = d3.select("#yearSelect");
 let fullData;
 const parseMDY = d3.timeParse("%m/%d/%Y");
 
-d3.csv("../../data/final_data.csv").then(data => {
+d3.csv("../../data/final_data_date_edit.csv").then(data => {
   const parseMDY = d3.timeParse("%m/%d/%Y");
 
   data.forEach(d => {
