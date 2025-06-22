@@ -1,6 +1,6 @@
 let rawData = [];
 
-d3.csv("../../data/final_data_date_edit.csv").then(data => {
+d3.csv("../../data/final_data.csv").then(data => {
   data.forEach(d => {
     d.Date = new Date(d.Date);
     d.Year = d.Date.getFullYear();
