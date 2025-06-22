@@ -258,7 +258,7 @@ function drawLineChartByMonth(data, selectedYear) {
   // Trục
   g.append("g")
     .attr("transform", `translate(0,${height})`)
-    .call(d3.axisBottom(x).tickFormat(m => `T${+m}`));
+    .call(d3.axisBottom(x).tickFormat(m => `Tháng ${+m}`));
   g.append("g").call(d3.axisLeft(y));
 
   // Legend
