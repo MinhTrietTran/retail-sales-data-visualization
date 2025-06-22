@@ -258,7 +258,7 @@ function drawLineChartByMonth(data, selectedYear) {
   // Trục
   g.append("g")
     .attr("transform", `translate(0,${height})`)
-    .call(d3.axisBottom(x).tickFormat(m => `T${+m}`));
+    .call(d3.axisBottom(x).tickFormat(m => `Tháng ${+m}`));
   g.append("g").call(d3.axisLeft(y));
 
   // Legend
@@ -292,5 +292,14 @@ for (const [category, monthMap] of categoryMonthSum.entries()) {
 
 commentText += `<p><b>Đề xuất:</b> Tăng cường khuyến mãi theo mùa dựa vào tháng cao điểm của từng ngành.</p>`;
 document.getElementById("line-comment").innerHTML = commentText;
+// Y-axis label
+svg.append("text")
+  .attr("transform", `rotate(-90)`)
+  .attr("x", - (margin.top + height / 2))
+  .attr("y", 15)
+  .attr("text-anchor", "middle")
+  .style("font-size", "14px")
+  .text("Tổng doanh thu");
+
 }
 
